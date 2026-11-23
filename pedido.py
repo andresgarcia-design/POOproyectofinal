@@ -45,7 +45,6 @@ class Pedido(ABC):
         resultado = metodo_pago.procesar_pago(self.calcular_total())
         self._estado = "pagado"
         return resultado
-    #extras
     def calcular_total(self):
             subtotal = sum(detalle.calcular_subtotal() for detalle in self._productos_pedidos)
             self._costo = subtotal + self.calcular_cargo_bs()
