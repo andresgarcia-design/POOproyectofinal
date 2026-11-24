@@ -22,10 +22,25 @@ class Restaurante:
     def registrar_pedido(self, pedido):
         self._pedidos.append(pedido)
 
+    def buscar_pedido(self, numero):
+            for pedido in self._pedidos:
+                if pedido.numero == numero:
+                    return pedido
+            return None
+    
     @property
     def nombre(self):
-        return self._nombre
-
+            return self._nombre
+    
     @property
     def productos(self):
-        return self._productos
+            return self._productos
+    
+    @property
+    def clientes(self):
+            return self._clientes
+    
+    @property
+    def pedidos(self):
+            return self._pedidos
+    
