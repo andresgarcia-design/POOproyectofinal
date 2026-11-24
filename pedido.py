@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
-from proyectoPOOrestaurante.pagos.metodo_pago import MetodoPago
+from metodo_pago import MetodoPago
 
-from .detalle_pedido import DetallePedido
+from detalle_pedido import DetallePedido
 
 
 class Pedido(ABC):

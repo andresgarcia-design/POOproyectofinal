@@ -1,4 +1,4 @@
-from .metodo_pago import MetodoPago
+from metodo_pago import MetodoPago
 
 
 class PagoQR(MetodoPago):

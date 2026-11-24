@@ -1,4 +1,4 @@
-from .producto import Producto
+from producto import Producto
 
 
 class Plato(Producto):

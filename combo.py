@@ -1,5 +1,5 @@
-from .producto import Producto
-from .plato import Plato
+from producto import Producto
+from plato import Plato
 
 
 class Combo(Producto):

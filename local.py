@@ -1,4 +1,4 @@
-from .pedido import Pedido
+from pedido import Pedido
 
 
 class Local(Pedido):
