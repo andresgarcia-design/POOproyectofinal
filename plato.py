@@ -9,7 +9,7 @@ class Plato(Producto):
     def calcular_precio(self):
         return self._precio
 
-    def estas_disponible(self, dia):
+    def esta_disponible(self, dia):
         return dia.lower() in self._dias_disponibles
 
     def contar_platos(self):
