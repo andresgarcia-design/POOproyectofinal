@@ -10,15 +10,17 @@ class DetallePedido:
     @property
     def cantidad(self):
         return self._cantidad
-    
+
     def aumentar_cantidad(self):
+        if self._cantidad >= 20:
+            raise ValueError("La cantidad máxima de un producto en el pedido es 20.")
         self._cantidad += 1
-    
+
     def calcular_subtotal(self):
         return self._producto.calcular_precio() * self._cantidad
-    
+
     def contar_platos(self):
         return self._producto.contar_platos() * self._cantidad
-    
+
     def __str__(self):
         return f"{self._cantidad} x {self._producto.nombre}: Bs {self.calcular_subtotal():.2f}"
