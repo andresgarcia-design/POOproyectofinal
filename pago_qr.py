@@ -12,3 +12,12 @@ class PagoQR(MetodoPago):
 
     def validar_codigo(self):
         return self._codigo_transaccion.isdigit() and len(self._codigo_transaccion) == 10
+
+    def nombre(self):
+        return "QR"
+
+    def lineas_comprobante(self, total, resultado):
+        return [f"Código de transacción: {self._codigo_transaccion}", f"Total cobrado: Bs {resultado:.2f}"]
+
+    def permitido_en_delivery(self):
+        return True
