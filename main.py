@@ -77,6 +77,7 @@ def mostrar_lista_productos(productos):
         print(f"  {i + 1}. [{productos[i].tipo()}] {productos[i]}")
 
 
+
 def cargar_datos_iniciales(restaurante):
     silpancho = Plato("Silpancho", 35, ["lunes", "miercoles", "viernes", "sabado"])
     pique = Plato("Pique macho", 45, ["viernes", "sabado", "domingo"])
