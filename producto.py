@@ -22,5 +22,9 @@ class Producto(ABC):
     def contar_platos(self):
         pass
 
+    @abstractmethod
+    def tipo(self):
+        pass
+
     def __str__(self):
         return f"{self.nombre} - Bs {self.calcular_precio():.2f}"
