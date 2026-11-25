@@ -3,6 +3,8 @@ from producto import Producto
 
 class Plato(Producto):
     def __init__(self, nombre, precio, dias_disponibles):
+        if float(precio) <= 0:
+            raise ValueError("El precio debe ser mayor que cero.")
         super().__init__(nombre, precio)
         self._dias_disponibles = dias_disponibles
 
@@ -14,3 +16,6 @@ class Plato(Producto):
 
     def contar_platos(self):
         return 1
+
+    def tipo(self):
+        return "Plato"
