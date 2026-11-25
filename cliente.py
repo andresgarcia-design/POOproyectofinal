@@ -8,4 +8,6 @@ class Cliente:
         return self._nombre
 
     def validar_telefono(self):
-        return self._telefono.isdigit() and len(self._telefono) == 8
+        if not self._telefono.isdigit() or len(self._telefono) != 8:
+            return False
+        return self._telefono[0] == "6" or self._telefono[0] == "7"
